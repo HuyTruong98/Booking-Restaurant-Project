@@ -1,0 +1,11 @@
+.img-1 {
+  width: 100%;
+  height: 900px;
+  background-image: url("./pexels-cleyder-duque-6400831.jpg");
+}
+
+h3 {
+  color: black;
+  bottom: 40%;
+  z-index: 1;
+}

@@ -1,0 +1,452 @@
+.about-us-logo {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+}
+
+.about-us-label {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 700px;
+  display: flex;
+}
+
+.about-us-title {
+  width: 50%;
+  padding-left: 20px;
+}
+
+.about-us-title p {
+  font-size: 40px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.about-us-title span {
+  padding-left: 40px;
+}
+
+.about-us-img {
+  width: 50%;
+  padding-top: 50px;
+}
+
+.about-us-title-1 {
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+.history-company {
+  background-color: #e5e5e5;
+  width: 100%;
+  height: 400px;
+  padding-top: 100px;
+  padding-left: 20px;
+  font-family: "Lato", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  display: flex;
+}
+
+.history-title {
+  width: 40%;
+  height: 200px;
+  color: #212529;
+  padding-left: 50px;
+}
+
+.history-title p {
+  font-size: 28px;
+  opacity: 0.7;
+}
+
+.congnhan {
+  width: 60%;
+}
+
+.congnhan p {
+  margin-left: 100px;
+  width: 50%;
+  text-align: left;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+/*basic reset*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/*forcing the body to take 100% height*/
+html,
+body {
+  min-height: 100%;
+}
+
+/*Thumbnail Background*/
+.thumb {
+  width: 600px;
+  height: 500px;
+  margin: 70px auto;
+  perspective: 1000px;
+}
+.thumb a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /*double layered BG for lighting effect*/
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://kalina.com.vn/wp-content/uploads/2019/07/danh-sach-24-nha-hang-tiec-cuoi-o-tphcm-gem-center.png");
+  /*disabling the translucent black bg on the main image*/
+  background-size: 0, cover;
+  /*3d space for children*/
+  transform-style: preserve-3d;
+  transition: all 0.5s;
+}
+.thumb:hover a {
+  transform: rotateX(80deg);
+  transform-origin: bottom;
+}
+/*bottom surface */
+.thumb a:after {
+  /*36px high element positioned at the bottom of the image*/
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 36px;
+  /*inherit the main BG*/
+  background: inherit;
+  background-size: cover, cover;
+  /*draw the BG bottom up*/
+  background-position: bottom;
+  /*rotate the surface 90deg on the bottom axis*/
+  transform: rotateX(90deg);
+  transform-origin: bottom;
+}
+/*label style*/
+.thumb a span {
+  color: white;
+  text-transform: uppercase;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  font: bold 12px/36px Montserrat;
+  text-align: center;
+  /*the rotation is a bit less than the bottom surface to avoid flickering*/
+  transform: rotateX(-89.99deg);
+  transform-origin: top;
+  z-index: 1;
+}
+/*shadow*/
+.thumb a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+  /*by default the shadow will be almost flat, very transparent, scaled down with a large blur*/
+  opacity: 0.15;
+  transform: rotateX(95deg) translateZ(-80px) scale(0.75);
+  transform-origin: bottom;
+}
+.thumb:hover a:before {
+  opacity: 1;
+  /*blurred effect using box shadow as filter: blur is not supported in all browsers*/
+  box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.5);
+  /*pushing the shadow down and scaling it down to size*/
+  transform: rotateX(0) translateZ(-60px) scale(0.85);
+}
+
+.img-view {
+  width: 100%;
+  height: 500px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap");
+.img-view-title {
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  font-size: 25px;
+  padding-top: 40px;
+}
+
+.img-view-3earch {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  padding-top: 40px;
+}
+
+.snip0019 {
+  width: 100%;
+  height: 400px;
+  padding-right: 40px;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+/* shine */
+.image-all {
+  width: 100%;
+  height: 580px;
+  background-color: white;
+}
+
+.decide {
+  width: 100%;
+  height: 100px;
+  padding-left: 100px;
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+.image-all-1 {
+  width: 100%;
+  height: 300px;
+  display: flex;
+}
+
+.image-all-2 {
+  width: 15%;
+  height: 300px;
+  background-color: white;
+}
+.image-all-4 {
+  width: 15%;
+  background-color: white;
+  height: 300px;
+}
+.image-all-3 {
+  width: 70%;
+  background-color: white;
+  height: 300px;
+}
+
+/* scss */
+.container {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+}
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: 0.5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  line-height: 0;
+}
+.box > img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover;
+  transition: 0.5s;
+}
+.box > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+}
+.box:hover {
+  flex: 1 1 50%;
+}
+.box:hover > img {
+  width: 100%;
+  height: 100%;
+}
+
+.nguoisanglap {
+  width: 100%;
+  height: 400px;
+  background-color: white;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.nguoisanglap-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pulse-image {
+  animation: pulse 2s infinite;
+  border-radius: 50%;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(168, 63, 57, 0.4);
+  }
+  5% {
+    transform: scale(1.01);
+  }
+  15% {
+    transform: scale(1);
+  }
+  70% {
+    box-shadow: 0 0 0 50px rgba(168, 63, 57, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 100px rgba(168, 63, 57, 0);
+  }
+}
+
+/* page đặt tiệc */
+
+.dattiec {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+/* ShowInfo */
+
+.border {
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 10px;
+}
+
+.image-section {
+  padding: 0px;
+}
+.image-section img {
+  width: 100%;
+  height: 380px;
+  position: relative;
+  top: -19%;
+  box-shadow: 5px 6px 8px #999999;
+}
+.user-image {
+  position: absolute;
+  margin-top: -48px;
+}
+.user-left-part {
+  margin: 0px;
+  /* box-shadow: 5px 6px 6px #999999; */
+}
+.user-image img {
+  width: 100px;
+  height: 100px;
+}
+.user-profil-part {
+  padding-bottom: 30px;
+  background-color: #fafafa;
+}
+.follow {
+  margin-top: 70px;
+}
+.user-detail-row {
+  margin: 0px;
+}
+.user-detail-section2 p {
+  font-size: 12px;
+  padding: 0px;
+  margin: 0px;
+}
+.user-detail-section2 {
+  margin-top: 10px;
+}
+.user-detail-section2 span {
+  color: #7cbbc3;
+  font-size: 20px;
+}
+.user-detail-section2 small {
+  font-size: 12px;
+  color: #d3a86a;
+}
+.profile-right-section {
+  padding: 20px 0px 10px 15px;
+  background-color: #ffffff;
+}
+.profile-right-section-row {
+  margin: 0px;
+}
+.profile-header-section1 h1 {
+  font-size: 25px;
+  margin: 0px;
+}
+.profile-header-section1 h5 {
+  color: #0062cc;
+}
+.req-btn {
+  height: 30px;
+  font-size: 12px;
+}
+.profile-tag {
+  padding: 10px;
+  border: 1px solid #f6f6f6;
+}
+.profile-tag p {
+  font-size: 12px;
+  color: black;
+}
+.profile-tag i {
+  color: #adadad;
+  font-size: 20px;
+}
+.image-right-part {
+  background-color: white;
+  margin: 0px;
+  padding: 5px;
+}
+.img-main-rightPart {
+  background-color: #fcfcfc;
+  margin-top: auto;
+}
+.image-right-detail {
+  padding: 0px;
+}
+.image-right-detail p {
+  font-size: 12px;
+}
+.image-right-detail a:hover {
+  text-decoration: none;
+}
+.image-right img {
+  width: 100%;
+}
+.image-right-detail-section2 {
+  margin: 0px;
+}
+.image-right-detail-section2 p {
+  color: #38acdf;
+  margin: 0px;
+}
+.image-right-detail-section2 span {
+  color: #7f7f7f;
+}
+
+.nav-link {
+  font-size: 1.2em;
+}
+
+.restaurant1 {
+  width: 100%;
+  height: 50%;
+}
+
+.highlight-restaurant {
+  display: flex;
+}
+
+.ant-menu.ant-menu-dark,
+.ant-menu-dark .ant-menu-sub,
+.ant-menu.ant-menu-dark .ant-menu-sub {
+  color: rgba(255, 255, 255, 0.65);
+  background: white;
+}
